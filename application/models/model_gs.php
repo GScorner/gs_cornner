@@ -75,7 +75,7 @@ class model_gs extends CI_Model {
     $email = (isset($_POST["email"])?$_POST["email"]:"");
     $password = (isset($_POST["pass_confirmation"])?$_POST["pass_confirmation"]:"");
 		echo $password;
-    $sql ="INSERT INTO customer (username,password,fname,lname,Email,activeflag,idtype_user)
+    $sql ="INSERT INTO user (username,password,fname,lname,Email,activeflag,idtype_user)
     VALUES ('".$username."','".$password."','".$fname."','".$lname."','".$email."','1','u002')";
     $query = $this->db->query($sql);
     $_SESSION["username"] = $username;
